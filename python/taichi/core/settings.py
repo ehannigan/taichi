@@ -66,7 +66,7 @@ def get_bin_directory():
 
 def get_output_directory():
     return os.environ.get('TAICHI_OUTPUT_DIR',
-                          os.path.join(get_repo_directory(), 'outputs'))
+                          os.path.join(get_repo_directory(), 'outputs_{}'.format(os.getpid())))
 
 
 def get_output_path(path, create=False):
